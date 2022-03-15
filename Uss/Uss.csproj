@@ -43,12 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Direction.cs" />
     <Compile Include="Figure.cs" />
+    <Compile Include="foodcreator.cs" />
     <Compile Include="HorizonatallLine.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="snake.cs" />
     <Compile Include="Verticalline.cs" />
+    <Compile Include="walls.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
