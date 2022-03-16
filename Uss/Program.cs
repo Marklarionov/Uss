@@ -46,7 +46,6 @@ namespace Uss
 					snake.HandleKey(key.Key);
 				}
 			}
-			WriteGameOver();
 			Console.ReadLine();
 		}
 	    
