@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Uss
 {
-    class foodcreator
+    class FoodCreator
     {
 		int mapWidht;
 		int mapHeight;
@@ -14,7 +14,7 @@ namespace Uss
 
 		Random random = new Random();
 
-		public foodcreator(int mapWidth, int mapHeight, char sym)
+		public FoodCreator(int mapWidth, int mapHeight, char sym)
 		{
 			this.mapWidht = mapWidth;
 			this.mapHeight = mapHeight;
