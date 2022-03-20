@@ -10,17 +10,17 @@ namespace Uss
     {
         static void Main(string[] args)
         {
-			Console.SetBufferSize(180, 80);
-
+			Console.SetBufferSize(80, 25);
+			
 			walls walls = new walls(80, 25);
 			walls.Draw();
 
-			// Отрисовка точек			
+			//точки			
 			Point p = new Point(4, 5, '*');
-			snake snake = new snake(p, 4, Direction.RIGHT);
-			snake.Drow();
+			Snake snake = new Snake(p, 4, Direction.RIGHT);
+			snake.Draw();
 
-			foodcreator foodCreator = new foodcreator(80, 25, '$');
+			FoodCreator foodCreator = new FoodCreator(80, 25, '$');
 			Point food = foodCreator.CreateFood();
 			food.Draw();
 
@@ -39,6 +39,7 @@ namespace Uss
 				{
 					snake.Move();
 				}
+
 				Thread.Sleep(100);
 				if (Console.KeyAvailable)
 				{
@@ -46,13 +47,5 @@ namespace Uss
 					snake.HandleKey(key.Key);
 				}
 			}
-			Console.ReadLine();
 		}
-	    
-		static void WriteText(String text, int xOffset, int yOffset)
-		{
-			Console.SetCursorPosition(xOffset, yOffset);
-			Console.WriteLine(text);
-		}
-	}
 }
