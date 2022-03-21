@@ -10,6 +10,7 @@ namespace Uss
 	{
 		protected List<Point> pList;
 
+		//метод для отрисовки точек
 		public void Draw()
 		{
 			foreach (Point p in pList)
@@ -19,6 +20,7 @@ namespace Uss
 			}
 		}
 
+		//общий метод для касания точек
 		internal bool IsHit(Figure figure)
 		{
 			foreach (var p in pList)
@@ -30,6 +32,7 @@ namespace Uss
 			return false;
 		}
 
+		//приватный метод для касания точек
 		private bool IsHit(Point point)
 		{
 			foreach (var p in pList)

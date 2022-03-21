@@ -8,6 +8,7 @@ namespace Uss
 {
     class Verticalline : Figure
     {
+        //констурктор для передвижения змейки по вертикальной линии
         public Verticalline(int yUp, int yDown, int x, char sym)
         {
             pList = new List<Point>();

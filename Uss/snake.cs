@@ -10,6 +10,7 @@ namespace Uss
     {
         Direction direction;
 
+        // конструктор для создания самой змейки
         public snake(Point tail, int length, Direction _direction)
         {
             direction = _direction;
@@ -21,6 +22,8 @@ namespace Uss
                 pList.Add(p);
             }
         }
+
+        // метод для движения змейки
         internal void Move()
         {
             Point tail = pList.First();
@@ -31,6 +34,8 @@ namespace Uss
             tail.Clear();
             head.Draw();
         }
+
+        // метод для добавления точек змейки впереди неё
         public Point GetNextPoint()
         {
             Point head = pList.Last();
@@ -38,6 +43,8 @@ namespace Uss
             nextPoint.Move(1, direction);
             return nextPoint;
         }
+
+        // метод если змейка касается себя  
         public bool IsHitTail()
         {
             var head = pList.Last();
@@ -48,6 +55,8 @@ namespace Uss
             }
             return false;
         }
+
+        // метод для привязки клавиш управления
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)
@@ -59,6 +68,8 @@ namespace Uss
             else if (key == ConsoleKey.UpArrow)
                 direction = Direction.UP;
         }
+
+        // метод если змейка касатеся еды
         public bool Eat(Point food)
         {
             Point head = GetNextPoint();

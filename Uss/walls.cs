@@ -14,18 +14,20 @@ namespace Uss
 		{
 			wallList = new List<Figure>();
 
-			// Отрисовка рамочки
+			// Отрисовка стен 
 			HorizonatallLine upLine = new HorizonatallLine(0, mapWidth - 2, 0, '+');
 			HorizonatallLine downLine = new HorizonatallLine(0, mapWidth - 2, mapHeight - 1, '+');
 			Verticalline leftLine = new Verticalline(0, mapHeight - 1, 0, '+');
 			Verticalline rightLine = new Verticalline(0, mapHeight - 1, mapWidth - 2, '+');
 
+			// добавление стен 
 			wallList.Add(upLine);
 			wallList.Add(downLine);
 			wallList.Add(leftLine);
 			wallList.Add(rightLine);
 		}
 
+		// метод "если змейка касается чего-то"
 		internal bool IsHit(Figure figure)
 		{
 			foreach (var wall in wallList)
@@ -37,7 +39,7 @@ namespace Uss
 			}
 			return false;
 		}
-
+		// метод для вывода на экран
 		public void Draw()
 		{
 			foreach (var wall in wallList)

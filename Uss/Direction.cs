@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Uss
 {
+    // класс для назначения названий направления
     enum Direction
     {
         LEFT,

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Uss
 {
+	// класс для создания еды
     class FoodCreator
     {
 		int mapWidht;
@@ -14,6 +15,7 @@ namespace Uss
 
 		Random random = new Random();
 
+		// конструктор генерации еды по координатам 
 		public FoodCreator(int mapWidth, int mapHeight, char sym)
 		{
 			this.mapWidht = mapWidth;
@@ -21,6 +23,7 @@ namespace Uss
 			this.sym = sym;
 		}
 
+		// функция для генерации еды
 		public Point CreateFood()
 		{
 			int x = random.Next(2, mapWidht - 2);

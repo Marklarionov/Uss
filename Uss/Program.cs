@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 
 namespace Uss
 {
-	internal class Program
+	class Program
 	{
 		static void Main(string[] args)
 		{
+
+			//вывод стен
 			walls walls = new walls(80, 25);
 			walls.Draw();
 
@@ -19,10 +21,12 @@ namespace Uss
 			snake snake = new snake(p, 4, Direction.RIGHT);
 			snake.Draw();
 
+			//создание еды
 			FoodCreator foodCreator = new FoodCreator(80, 25, '$');
 			Point food = foodCreator.CreateFood();
 			food.Draw();
 
+			// игровой процесс 
 			while (true)
 			{
 				if (walls.IsHit(snake) || snake.IsHitTail())

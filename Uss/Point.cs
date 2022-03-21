@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace Uss
 {
-    internal class Point
+    class Point
     {
-        //Класс для создания "точки"
+        //добавление переменных для координат
         public int x;
         public int y;
         public char sym;
 
         public Point()
         {
-
         }
-
+        //конструктор для определения координат
         public Point(int _x, int _y, char _sym)
         {
             x = _x;
             y = _y;
             sym = _sym;
         }
-
+        //конструктор для приравнивания координат змейке 
         public Point(Point p)
         {
             x=p.x;
@@ -32,6 +31,7 @@ namespace Uss
             sym = p.sym;
         }
 
+        // метод для движения змейки по координатам X и Y
         public void Move(int offset, Direction direction)
         {
             if (direction == Direction.RIGHT)
@@ -44,11 +44,11 @@ namespace Uss
             }
             else if (direction == Direction.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
             else if (direction == Direction.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
         public bool IsHit(Point p)
@@ -61,6 +61,7 @@ namespace Uss
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+        // метод для удаления хвоста змейки при движении
         public void Clear()
         {
             sym = ' ';
