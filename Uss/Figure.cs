@@ -6,37 +6,38 @@ using System.Threading.Tasks;
 
 namespace Uss
 {
-    class Figure
-    {
-        protected List<Point> pList;
-
-	public void Draw()
+	class Figure
 	{
-		foreach (Point p in pList)
+		protected List<Point> pList;
+
+		public void Draw()
 		{
+			foreach (Point p in pList)
+			{
 
-			p.Draw();
+				p.Draw();
+			}
 		}
-	}
 
-	internal bool IsHit(Figure figure)
-	{
-		foreach (var p in pList)
+		internal bool IsHit(Figure figure)
 		{
-			if (figure.IsHit(p))
+			foreach (var p in pList)
+			{
+				if (figure.IsHit(p))
 
-				return true;
+					return true;
+			}
+			return false;
 		}
-		return false;
-	}
 
-	private bool IsHit(Point point)
-	{
-		foreach (var p in pList)
+		private bool IsHit(Point point)
 		{
-			if (p.IsHit(point))
-				return true;
+			foreach (var p in pList)
+			{
+				if (p.IsHit(point))
+					return true;
+			}
+			return false;
 		}
-		return false;
 	}
 }

@@ -42,7 +42,7 @@ namespace Uss
 		{
 			foreach (var wall in wallList)
 			{
-				wall.Drow();
+				wall.Draw();
 			}
 		}
 	}
