@@ -19,10 +19,17 @@ namespace Uss
 
         public void Play()
         {
-            //player.URL = pathToMedia + "название аудиофайла";
+            player.URL = pathToMedia + "viktor.mp3";
             player.settings.volume = 30;
             player.controls.play();
             player.settings.setMode("loop", true);
+        }
+
+        public void PlayEat()
+        {
+            player.URL = pathToMedia + "crunch.mp3";
+            player.settings.volume = 100;
+            player.controls.play();
         }
 
         public void Play(string songName)
@@ -30,10 +37,9 @@ namespace Uss
             player.URL = pathToMedia + songName + ".mp3";
             player.controls.play();
         }
-
-        public void PlayEat()
+        public void Dead()
         {
-            player.URL = pathToMedia + "click.mp3";
+            player.URL = pathToMedia + "dead.mp3";
             player.settings.volume = 100;
             player.controls.play();
         }

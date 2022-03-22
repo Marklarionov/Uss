@@ -58,6 +58,7 @@
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="snake.cs" />
     <Compile Include="Sounds.cs" />
     <Compile Include="Verticalline.cs" />
@@ -66,6 +67,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="crunch.mp3" />
+    <Content Include="dead.mp3" />
+    <Content Include="viktor.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
