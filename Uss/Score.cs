@@ -16,7 +16,7 @@ namespace Uss
         public void Shet()
         {
             score += 1;
-            Console.SetCursorPosition(70, 23);
+            Console.SetCursorPosition(70, 20);
             Console.WriteLine($"Score: {score}");
 
         }
